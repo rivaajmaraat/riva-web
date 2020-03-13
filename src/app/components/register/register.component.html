@@ -5,20 +5,20 @@
     <div class="auth-form">
         <h2>REGISTER</h2>
         <div class="form-group">
-            <input [(ngModel)]="passwordTokenRequest.EmailAddress" 
+            <input 
                 type="text" 
                 class="floating-label-field floating-label-field--s3" 
                 placeholder="Username" required/>
             <label class="floating-label">Username</label>
-            <div *ngIf="error.emailAddress" class="field-error-message indicator-required">Username is required</div>
+            <!-- <div *ngIf="error.emailAddress" class="field-error-message indicator-required">Username is required</div> -->
         </div>
         <div class="form-group">
-            <input [(ngModel)]="passwordTokenRequest.Password"  
+            <input 
                 type="password" 
                 class="floating-label-field floating-label-field--s3" 
                 placeholder="Password" required/>
             <label class="floating-label">Password</label>
-            <div *ngIf="error.password" class="field-error-message indicator-required">Password is required</div>
+            <!-- <div *ngIf="error.password" class="field-error-message indicator-required">Password is required</div> -->
         </div>
         <div class="form-group">
             <button class="btn-confirm" (click)="register()">Register</button>
