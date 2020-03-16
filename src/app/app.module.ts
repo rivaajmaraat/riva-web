@@ -10,13 +10,15 @@ import { RegisterComponent } from './components/register/register.component';
 
 import { GenericService } from './services/generic.service';
 import { AuthService } from './services/auth.service';
+import { LoadOverlayComponent } from './custom/load-overlay/load-overlay.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoadOverlayComponent
   ],
   imports: [
     BrowserModule,

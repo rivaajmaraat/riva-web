@@ -4,7 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Login } from 'src/app/models/login';
 
 @Component({
-  selector: 'app-register',
+  selector: 'riva-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
