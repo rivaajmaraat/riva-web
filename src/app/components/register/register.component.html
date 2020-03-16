@@ -3,9 +3,9 @@
         <img src="../../../assets/images/riva-logo.svg">
     </div>
     <div class="auth-form">
-        <h2>REGISTER</h2>
+        <h2>REGISTER (FOR DEMO PURPOSE)</h2>
         <div class="form-group">
-            <input 
+            <input [(ngModel)]="login.UserName"
                 type="text" 
                 class="floating-label-field floating-label-field--s3" 
                 placeholder="Username" required/>
@@ -13,7 +13,7 @@
             <!-- <div *ngIf="error.emailAddress" class="field-error-message indicator-required">Username is required</div> -->
         </div>
         <div class="form-group">
-            <input 
+            <input [(ngModel)]="login.Password"
                 type="password" 
                 class="floating-label-field floating-label-field--s3" 
                 placeholder="Password" required/>

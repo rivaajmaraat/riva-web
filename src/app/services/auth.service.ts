@@ -13,6 +13,10 @@ export class AuthService extends GenericService{
         super(http);
     }
 
+    public loginUser(login: Login){
+        return this.post(login, '/login');
+    }
+
     public registerUser(login: Login){
         return this.post(login, '/register');
     }

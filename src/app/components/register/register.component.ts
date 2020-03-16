@@ -9,7 +9,7 @@ import { Login } from 'src/app/models/login';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent extends GenericComponent implements OnInit{
-  login: Login;
+  public login = new Login;
 
   constructor(authService: AuthService) { 
     super(authService);
@@ -20,7 +20,7 @@ export class RegisterComponent extends GenericComponent implements OnInit{
 
   register(){
     this.authService.registerUser(this.login).subscribe(response => {
-      
+      console.log(response);
     });
   }
 
