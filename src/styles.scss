@@ -53,11 +53,29 @@ button{
 	font-size: 16px;
 	text-transform: uppercase;
 	&:focus { text-decoration: none; outline: 0; }
+
+	&:hover{ 
+		background-color: $theme-color-contrast;
+		color: black;
+	}
 }
 
 .btn-confirm{
 	background-color: $theme-color;
 	color: white;
+}
+
+.btn-new{
+	background-color: $theme-color;
+	color: white;
+	width: 120px;
+	border: 2px solid white;
+	font-size: 12px;
+	margin: auto;
+
+	&:hover{
+		border: 2px solid #ffffff00;
+	}
 }
 
 .btn-link{
@@ -80,6 +98,10 @@ button{
 .left-link{ float: left; } 
 
 .right-link{ float: right; }
+
+.indicator-required{
+	color: red;
+}
 
 // Floating Label
 /* Making the label break the flow */
@@ -170,51 +192,5 @@ button{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-/*Load Overlay*/
-.load-overlay{
-	width: 100%;
-	// height: calc(100% - 50px);
-	height: 100%;
-	position: fixed;
-	background-color: #ffffffe5;
-	text-align: center;
-	z-index: 9999;
-}
-
-.lds-ring {
-	@extend .center-position;
-	display: inline-block;
-	position: absolute;
-	width: 80px;
-	height: 80px;
-}
-.lds-ring div {
-	box-sizing: border-box;
-	display: block;
-	position: absolute;
-	width: 64px;
-	height: 64px;
-	margin: 8px;
-	border: 8px solid $theme-color;
-	border-radius: 50%;
-	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-	border-color: $theme-color transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-	animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-	animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-	animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

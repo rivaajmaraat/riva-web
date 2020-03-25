@@ -5,28 +5,28 @@
     <div class="auth-form">
         <h2>LOGIN</h2>
         <div class="form-group">
-            <input [(ngModel)]="login.UserName"
+            <input [(ngModel)]="login.userName"
                 type="text" 
                 class="floating-label-field floating-label-field--s3" 
-                placeholder="Username" required/>
-            <label class="floating-label">Username</label>
-            <!-- <div *ngIf="error.emailAddress" class="field-error-message indicator-required">Username is required</div> -->
+                placeholder="UserName" required/>
+            <label class="floating-label">UserName</label>
+            <div *ngIf="error.UserName" class="field-error-message indicator-required">UserName is required</div>
         </div>
         <div class="form-group">
-            <input [(ngModel)]="login.Password"
-                type="password" 
+            <input [(ngModel)]="login.password"
+                type="Password" 
                 class="floating-label-field floating-label-field--s3" 
                 placeholder="Password" required/>
             <label class="floating-label">Password</label>
-            <!-- <div *ngIf="error.password" class="field-error-message indicator-required">Password is required</div> -->
+            <div *ngIf="error.Password" class="field-error-message indicator-required">Password is required</div>
         </div>
         <div class="form-group">
             <button class="btn-confirm" (click)="loginUser()">Login</button>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <div>
                 <span routerLink="/register" class="btn-link left-link">Register</span>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

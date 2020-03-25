@@ -1,8 +1,8 @@
 export class Login{
-    LoginId: number; // Probably needs JsonIgnore in backend
-    UserName: string;
-    Password: string;
-    DateCreated: Date; // Probably needs JsonIgnore in backend
-    LastLogin: Date;
-    Status: number; // Probably needs JsonIgnore in backend
+    loginId: number; // Probably needs JsonIgnore in backend
+    userName: string;
+    password: string;
+    dateCreated: Date; // Probably needs JsonIgnore in backend
+    lastLogin: Date;
+    status: number; // Probably needs JsonIgnore in backend
 }

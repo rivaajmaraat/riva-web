@@ -12,7 +12,24 @@ export class GenericService{
         this.http = _http;
     }
 
+    public get(id: number, endpoint: string): Observable<any>{
+        return this.http.get<any>(this.baseUrl + endpoint + '/' + id, { headers: this.headers });
+    }
+
+    public getList(): Observable<any>{
+        // return this.http.get<any>(this.baseUrl + '/list', { headers: this.headers });
+        return this.http.get<any>(this.baseUrl, { headers: this.headers });
+    }
+
     public post(object: any, endpoint: string): Observable<any>{
         return this.http.post(this.baseUrl + endpoint, JSON.stringify(object), { headers: this.headers });
+    }
+
+    public put(object: any, endpoint: string): Observable<any> {
+        return this.http.put(this.baseUrl + endpoint, JSON.stringify(object), { headers: this.headers });
+    }
+
+    public delete(id: number, endpoint: string): Observable<any> {
+        return this.http.delete(this.baseUrl + endpoint + '/' + id, { headers: this.headers });
     }
 }

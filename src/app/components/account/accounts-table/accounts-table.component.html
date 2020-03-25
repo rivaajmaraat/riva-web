@@ -1,0 +1,45 @@
+
+<div class="table-container">
+    <h2>ACCOUNTS</h2>
+    <table class="table">
+        <thead>
+          <tr class="col">
+            <th scope="col">ID</th>
+            <th scope="col">USERNAME</th>
+            <th scope="col">PASSWORD</th>
+            <th scope="col">DATE CREATED</th>
+            <th scope="col">LAST LOGIN DATE</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-data" *ngFor="let login of logins">
+            <th scope="row">
+              {{ login.loginId }}
+            </th>
+            <td><input [(ngModel)]="login.userName" (blur)="updateLoginUsername(login)" type="text" placeholder="username"/></td>
+            <td><input [(ngModel)]="login.password" (focus)="login.password=''" (blur)="updateLoginPassword(login)"type="password" placeholder="password"/></td>
+            <td>{{ login.dateCreated | date:'long' }}</td>
+            <td>{{ login.lastLogin | date:'long' }}</td>
+            <td class="btn-link btn-delete" (click)="deleteLogin(login.loginId)">DELETE</td>
+          </tr>
+
+          <tr class="row-data" *ngFor="let newLogin of newLogins">
+            <th scope="row">
+              +
+            </th>
+            <td><input [(ngModel)]="newLogin.userName" (blur)="save(newLogin)" type="text" placeholder="username"/></td>
+            <td><input [(ngModel)]="newLogin.password" (focus)="newLogin.password=''" (blur)="save(newLogin)"type="password" placeholder="password"/></td>
+            <td>{{ newLogin.dateCreated | date:'long' }}</td>
+            <td>{{ newLogin.lastLogin | date:'long' }}</td>
+            <td class="btn-link btn-delete" (click)="newLogin.loginId=-1;deleteNewLogin(newLogin.loginId);">DELETE</td>
+          </tr>
+
+          <tr *ngIf="!logins && !newLogins">No data found!</tr>
+        </tbody>
+    </table>
+    <button class="btn-new" (click)="newRow()">+ New</button>
+    <riva-order></riva-order>
+</div>
+
+
