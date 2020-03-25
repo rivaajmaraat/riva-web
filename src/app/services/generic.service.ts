@@ -17,8 +17,7 @@ export class GenericService{
     }
 
     public getList(): Observable<any>{
-        // return this.http.get<any>(this.baseUrl + '/list', { headers: this.headers });
-        return this.http.get<any>(this.baseUrl, { headers: this.headers });
+        return this.http.get<any>(this.baseUrl + '/list', { headers: this.headers });
     }
 
     public post(object: any, endpoint: string): Observable<any>{
